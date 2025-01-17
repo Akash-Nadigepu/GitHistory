@@ -1,0 +1,26 @@
+ cd testust/
+  204  git log
+  205  git log
+  206  git commit --amend
+  207  ls
+  208  echo "hello new change" >> ust.txt
+  209  git add .
+  210  git commit -m "ust txt changed"
+  211  git commit --amend
+  212  git log --oneline
+  213  git commit f43clac --amend
+  214  git commit -h
+  215  git commit db6e614 --amend
+  216  git tag
+  217  git tag -a @author db6e614 -m akash
+  218  git log
+  219  git tag -a "this is first v1" db6e614 -m akash
+  220  git tag -a "this-is-first-v1" db6e614 -m akash
+  221  git log
+  222  git show @author
+  223  git log
+  224  git tag
+  225  git tag -a "new-tag-added" f43c1ac -m villas sir
+  226  git tag -a "new-tag-added" f43c1ac -m villas
+  227  clear
+  228  git show @author
