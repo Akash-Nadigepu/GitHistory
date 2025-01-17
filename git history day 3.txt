@@ -1,0 +1,135 @@
+ mkdir Rebase
+  246  cd Rebase/
+  247  echo "M1" >> file.txt
+  248  git add .
+  249  git commit -m "M1"
+  250  echo "M2" >> file.txt
+  251  git add .
+  252  git commit -m "M2"
+  253  echo "M3" >> file.txt
+  254  git add .
+  255  git commit -m "M3"
+  256  git checkout -b feature
+  257  echo "f1" >> file.txt
+  258  git add .
+  259  git commit -m "F1"
+  260  echo "f2" >> file.txt
+  261  git add .
+  262  git commit -m "F2"
+  263  git checkout -b Newfeature
+  264  git branch
+  265  clear
+  266  git checkout feature
+  267  git rebase master
+  268  git checkout master
+  269  echo "M4" >> file.txt
+  270  git add .
+  271  git commit -m "M4"
+  272  git log
+  273  git checkout feature
+  274  git log
+  275  git rebase master
+  276  cd ..
+  277  rm -rf rebase
+  278  rm -rf Rebase
+  279  mkdir rebase
+  280  cd rebase/
+  281  git init
+  282  echo "M1" >> file.txt
+  283  git add .
+  284  git commit -m "M1"
+  285  echo "M2" >> file.txt
+  286  git add .
+  287  git commit -m "M2"
+  288  echo "M3" >> file.txt
+  289  git add .
+  290  git commit -m "M3"
+  291  git checkout -b feature
+  292  echo "F1" >> feature.txt
+  293  git add .
+  294  git commit -m "F1"
+  295  echo "F2" >> feature.txt
+  296  git add .
+  297  git commit -m "F2"
+  298  git checkout -b newfeature
+  299  git checkout master
+  300  echo "M4" >> file.txt
+  301  git add .
+  302  git commit -m "M4"
+  303  git checkout feature
+  304  git rebase master
+  305  git log --oneline
+  306  git checkout master
+  307  git merge newfeature
+  308  git log --oneline
+  309  git checkout feature
+  310  git log --oneline
+  311  cd ..
+  312  clear
+  313  pwd
+  314  ls -a
+  315  ls -a .git
+  316  ls -a .git
+  317  clear
+  318  mkdir Stash
+  319  cd Sta
+  320  cd Stash/
+  321  git init
+  322  echo "hi" >> file.txt
+  323  git add .
+  324  git commit -m "hi added"
+  325  git remote add origin git@github.com:Akash-Nadigepu/Stash.git
+  326  git push -u origin master
+  327  echo "welcome" > file.txt
+  328  git pull
+  329  git stash save "first stash"
+  330  git status
+  331  cat file.txt
+  332  git pull
+  333  cat file.txt
+  334  git stash list
+  335  git stash apply
+  336  cat file.txt
+  337  git add .
+  338  git commit -m "v1"
+  339  git status
+  340  git push
+  341  git stash list
+  342  git stash pop
+  343  git stash drop stash@{0}
+  344  git stash list
+  345  cat file.txt
+  346  git stash list
+  347  git stash save "2nd change"
+  348  git add .
+  349  git stash save "2nd change"
+  350  git stash list
+  351  git stash show stash@{0}
+  352  git stash show -p stash@{0}
+  353  mkdir testGit
+  354  cd testGit/
+  355  git init
+  356  echo "hello world">> file.txt
+  357  git add .
+  358  git commit -m "m1"
+  359  echo "h1">> file.txt
+  360  git add .
+  361  git commit -m "m2"
+  362  echo "w1">> file.txt
+  363  git add .
+  364  git commit -m "m3"
+  365  cat file.txt
+  366  git log
+  367  git log --oneline
+  368  git revert HEAD~2
+  369  git status
+  370  cat file.txt
+  371  git log --oneline
+  372  git restore --head
+  373  git restore --staged
+  374  git restore --staged file.txt
+  375  git status
+  376  cat file.txt
+  377  git add .
+  378  git commit -m "m4"
+  379  git revert head
